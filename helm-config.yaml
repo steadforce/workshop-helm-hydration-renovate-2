@@ -1,0 +1,13 @@
+# Configuration file used by the pipeline hydration step
+# to render the manifests for the different environments
+releaseName: &name renovate
+namespace: *name
+environments:
+  default:
+    valueFiles: []
+  dev:
+    valueFiles:
+    - values-dev.yaml
+  prod:
+    valueFiles:
+    - values-prod.yaml
